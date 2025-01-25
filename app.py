@@ -22,6 +22,10 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['UPLOAD_FOLDER'] = 'uploads'
 app.config['GOOGLE_CLIENT_ID'] = os.getenv('GOOGLE_CLIENT_ID')
 app.config['GOOGLE_CLIENT_SECRET'] = os.getenv('GOOGLE_CLIENT_SECRET')
+@app.before_request
+def before_request():
+    if request.headers.get('X-Forwarded-Proto') == 'http':
+        return redirect(request.url.replace("http://", "https://"), code=301)
 
 uri = os.getenv('SQLALCHEMY_DATABASE_URI')  # Get the database URI from environment variables
 if uri and uri.startswith("postgres://"):
