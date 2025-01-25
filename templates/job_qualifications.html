@@ -1,0 +1,350 @@
+<!DOCTYPE HTML>
+<html lang="">
+<head>
+    <title>Top Tech Skills</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        h1, h2 {
+            color: #d2691e;
+        }
+        .job-section {
+            background: #fff5e1;
+            border-radius: 8px;
+            margin: 20px auto;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+        }
+        .job-section h2 {
+            margin-bottom: 15px;
+            font-size: 1.5em;
+            display: flex;
+            align-items: center;
+        }
+        .job-section h2 i {
+            margin-right: 10px;
+            color: #ff8c00;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        table th, table td {
+            text-align: left;
+            padding: 10px;
+            border: 1px solid #e0c6a6;
+        }
+        table th {
+            background-color: #ffa07a;
+            color: #fff;
+        }
+        table tbody tr:nth-child(odd) {
+            background-color: #fff2e0;
+        }
+        .icon {
+            color: #ff8c00;
+            margin-right: 5px;
+        }
+        @media (max-width: 768px) {
+            table {
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="main">
+            <div class="inner">
+                <header id="header">
+                    <a href="{{ url_for('about_me') }}" class="logo"><strong>Dreux Hebert</strong> CS Student at KSU</a>
+                    <ul class="icons">
+                        <li><a href="https://www.instagram.com/dreu.x/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+                        <li><a href="https://github.com/dreuxhebert" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+                        <li><a href="https://www.linkedin.com/in/dreux-hebert-0117a5300/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                    </ul>
+                </header>
+                <section>
+                    <header class="main">
+                        <h1>Top Skills in Tech as of 1/25/2025</h1>
+                    </header>
+                    <!-- Job Sections -->
+                    <div class="job-section">
+    <h2><i class="fas fa-laptop-code"></i> Software Engineer</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Languages</th>
+                <th>Frameworks</th>
+                <th>Tools</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Python (45%)</td>
+                <td>Artificial Intelligence (AI) (60%)</td>
+                <td>Cloud Computing (65%)</td>
+            </tr>
+            <tr>
+                <td>Java (45%)</td>
+                <td>Machine Learning (60%)</td>
+                <td>Cybersecurity (55%)</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="job-section">
+    <h2><i class="fas fa-chart-line"></i> Data Scientist</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Languages</th>
+                <th>Frameworks</th>
+                <th>Tools</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Python (60%)</td>
+                <td>scikit-learn (65%)</td>
+                <td>Tableau (55%)</td>
+            </tr>
+            <tr>
+                <td>R (60%)</td>
+                <td>TensorFlow (65%)</td>
+                <td>Power BI (55%)</td>
+            </tr>
+            <tr>
+                <td>SQL (60%)</td>
+                <td>Big Data Technologies (50%)</td>
+                <td>N/A</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="job-section">
+    <h2><i class="fas fa-code"></i> Web Developer</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Languages</th>
+                <th>Frameworks</th>
+                <th>Tools</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>HTML (55%)</td>
+                <td>React (60%)</td>
+                <td>Bootstrap (40%)</td>
+            </tr>
+            <tr>
+                <td>CSS (55%)</td>
+                <td>Angular (60%)</td>
+                <td>Chrome DevTools (45%)</td>
+            </tr>
+            <tr>
+                <td>JavaScript (60%)</td>
+                <td>Node.js (50%)</td>
+                <td>Version Control (Git) (45%)</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="job-section">
+    <h2><i class="fas fa-shield-alt"></i> Cybersecurity Analyst</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Languages</th>
+                <th>Frameworks</th>
+                <th>Tools</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Bash (55%)</td>
+                <td>N/A</td>
+                <td>Wireshark (50%)</td>
+            </tr>
+            <tr>
+                <td>Python (55%)</td>
+                <td>Cryptography (50%)</td>
+                <td>Firewalls (50%)</td>
+            </tr>
+            <tr>
+                <td>N/A</td>
+                <td>Threat Detection (60%)</td>
+                <td>Penetration Testing (45%)</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="job-section">
+    <h2><i class="fas fa-brain"></i> AI/ML Specialist</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Languages</th>
+                <th>Frameworks</th>
+                <th>Tools</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Python (60%)</td>
+                <td>TensorFlow (65%)</td>
+                <td>Jupyter Notebook (60%)</td>
+            </tr>
+            <tr>
+                <td>R (55%)</td>
+                <td>PyTorch (65%)</td>
+                <td>Google Colab (55%)</td>
+            </tr>
+            <tr>
+                <td>C++ (50%)</td>
+                <td>Keras (55%)</td>
+                <td>N/A</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="job-section">
+    <h2><i class="fas fa-cloud"></i> Cloud Engineer</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Languages</th>
+                <th>Frameworks</th>
+                <th>Tools</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Python (55%)</td>
+                <td>N/A</td>
+                <td>AWS (70%)</td>
+            </tr>
+            <tr>
+                <td>Bash (55%)</td>
+                <td>N/A</td>
+                <td>Docker (65%)</td>
+            </tr>
+            <tr>
+                <td>N/A</td>
+                <td>N/A</td>
+                <td>Kubernetes (65%)</td>
+            </tr>
+            <tr>
+                <td>N/A</td>
+                <td>N/A</td>
+                <td>Terraform (60%)</td>
+            </tr>
+        </tbody>
+    </table>
+                    </div>
+                </section>
+            </div>
+        </div>
+					<div id="sidebar">
+						<div class="inner">
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+									<ul>
+										<li><a href="{{ url_for('index') }}">Homepage</a></li>
+                                        <li><a href="{{ url_for('resume_checker') }}">Resume Checker</a></li>
+                                        <li><a href="{{ url_for('job_matcher') }}">Job Matcher</a></li>
+                                        <li><a href="{{ url_for('job_qualifications') }}">Job Qualifications</a></li>
+                                        <li><a href="{{ url_for('school_work') }}">Relevant Coursework</a></li>
+                                        <li><a href="{{ url_for('machine_learning') }}">Machine Learning</a></li>
+										<li><a href="{{ url_for('webapp') }}">Making WebApps</a></li>
+										<li><a href="{{ url_for('java') }}">Java</a></li>
+										<li>
+											<span class="opener">More links</span>
+											<ul>
+												<li><a href="{{ url_for('python') }}">Python</a></li>
+												<li><a href="{{ url_for('js_ts') }}">Java/TypeScript</a></li>
+												<li><a href="{{ url_for('sql') }}">SQL</a></li>
+												<li><a href="{{ url_for('about_me') }}">About me</a></li>
+											</ul>
+										</li>
+									</ul>
+								</nav>
+								<section>
+									<header class="major">
+										<h2>More important information</h2>
+									</header>
+									<div class="mini-posts">
+										<article>
+											<img src="{{ url_for('static', filename='images/hackathon.jpg') }}" alt="">
+											<p>Hackathons are collaborative coding events where participants work in
+                                                teams to build innovative projects within a limited time. They provide
+                                                students with hands-on experience, improve problem-solving skills, and
+                                                foster teamwork. Hackathons also help students network, learn new technologies,
+                                                and build portfolios, making them valuable for career growth.</p>
+										</article>
+										<article>
+											<img src="{{ url_for('static', filename='images/GitHub.png') }}" alt="">
+											<p>If you do not know already, GitHub is a crucial tool for developers, offering version control
+                                                to track code changes, collaborate on projects, and manage workflows
+                                                efficiently. It enables teamwork through pull requests, fosters learning
+                                                via open-source projects, and serves as a portfolio to showcase skills to
+                                                employers. Its integration with tools like CI/CD pipelines makes it essential for modern software development.</p>
+										</article>
+										<article>
+											<img src="{{ url_for('static', filename='images/learn.png') }}" alt="">
+											<p>If you click the link below, you'll find a collection of the most useful
+                                                and important topics taught to computer science majors. It highlights
+                                                the connection between classroom learning and real-world job applications.
+                                            You can choose to learn form various topics and only the key points to help your
+                                            carer.</p>
+										</article>
+									</div>
+									<ul class="actions">
+										<li><a href="{{ url_for('school_work') }}" class="button">Learn now</a></li>
+									</ul>
+								</section>
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>Get in touch with me!</h2>
+									</header>
+									<p>Follow me and shoot me a message on LinkedIn or to my email! Always open to answer
+                                    any questions.</p>
+									<ul class="contact">
+										<li class="icon solid fa-envelope"><a href="#">dreuxcharles@ymail.com</a></li>
+										<li class="icon solid fa-home"><a href="#">https://www.linkedin.com/in/dreux-hebert-0117a5300/</a></li>
+									</ul>
+								</section>
+								<footer id="footer">
+									<p class="copyright">&copy; Untitled. All rights reserved.<a href=""></a><a href=""></a>  </p>
+								</footer>
+						</div>
+					</div>
+			</div>
+    <!-- Scripts -->
+    <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/browser.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/breakpoints.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/util.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

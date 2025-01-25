@@ -1,0 +1,291 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <title>School Work</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+        .main-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .course-section {
+            background: #fff;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .course-section h2 {
+            display: flex;
+            align-items: center;
+            font-size: 1.5em;
+        }
+        .course-section h2 i {
+            margin-right: 10px;
+            color: #007bff;
+        }
+        .course-details {
+            background-color: #f9f9f9;
+            padding: 10px;
+            border-left: 4px solid #007bff;
+            margin-top: 15px;
+        }
+        @media (max-width: 768px) {
+            body {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+           <div id="main">
+            <div class="inner">
+                <header id="header">
+                    <a href="{{ url_for('about_me') }}" class="logo"><strong>Dreux Hebert</strong> CS Student at KSU</a>
+                    <ul class="icons">
+                        <li><a href="https://www.instagram.com/dreu.x/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+                        <li><a href="https://github.com/dreuxhebert" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+                        <li><a href="https://www.linkedin.com/in/dreux-hebert-0117a5300/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                    </ul>
+                </header>
+        <!-- Main Content -->
+    <section>
+        <header class="main-header">
+            <h1>Relevant Coursework Overview</h1>
+        </header>
+        <!-- Calculus I -->
+        <div class="course-section">
+            <h2><i class="fas fa-square-root-alt"></i> Calculus I</h2>
+            <div class="course-details">
+                <p><strong>Focus:</strong> Derivatives and their applications in Machine Learning.</p>
+                <p>Calculus I introduces the foundational concepts of limits, derivatives, and integrals. Derivatives, in particular, play a significant role in machine learning algorithms:</p>
+                <ul>
+                    <li><i class="fas fa-cogs"></i> <strong>Optimization:</strong> Derivatives are used in gradient descent to minimize cost functions and optimize model performance.</li>
+                    <li><i class="fas fa-chart-line"></i> <strong>Understanding Change:</strong> Derivatives help in understanding how changes in inputs affect outputs, critical for training models.</li>
+                </ul>
+                <p><strong>Example Problem:</strong> Find the minimum of a function using derivatives.
+                    <br><em>Problem:</em> Minimize the cost function <code>f(x) = x^2 + 4x + 6</code>.
+                    <br><em>Solution:</em> Take the derivative <code>f'(x) = 2x + 4</code> and set it to 0. Solving <code>2x + 4 = 0</code> gives <code>x = -2</code>, which is the minimum point.
+                </p>
+                <p><strong>Real-World Application:</strong> This concept is used in gradient descent, where the derivative of a loss function helps adjust weights in models like linear regression and neural networks to improve accuracy.</p>
+                <p><strong>Recommended YouTube Links:</strong></p>
+                <ul>
+                    <li><a href="https://www.youtube.com/watch?v=ACmuBbuXn20" target="_blank">Introduction to Derivatives</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=IHZwWFHWa-w" target="_blank">Gradient Descent Explained</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- Calculus II -->
+        <div class="course-section">
+            <h2><i class="fas fa-infinity"></i> Calculus II</h2>
+            <div class="course-details">
+                <p><strong>Focus:</strong> Integration and advanced techniques for computational applications.</p>
+                <p>Calculus II dives deeper into integration, which is essential for solving area under curves and probabilities in ML:</p>
+                <ul>
+                    <li><i class="fas fa-chart-area"></i> <strong>Probability Distributions:</strong> Integration is used to calculate probabilities from continuous distributions like Gaussian (Normal) distribution.</li>
+                    <li><i class="fas fa-brain"></i> <strong>Fourier Transforms:</strong> Used in signal processing and neural network optimizations.</li>
+                </ul>
+                <p><strong>Example Problem:</strong> Calculate the probability of a random variable in a normal distribution.
+                    <br><em>Problem:</em> For a normal distribution with mean 0 and standard deviation 1, find the probability that <code>-1 &lt; x &lt; 1</code>.
+                    <br><em>Solution:</em> Integrate the probability density function <code>f(x) = (1/sqrt(2π)) * e^(-x^2 / 2)</code> from -1 to 1.
+                </p>
+                <p><strong>Real-World Application:</strong> Integration is critical in ML for normalizing data and calculating areas under curves, especially in probability and statistics-based models.</p>
+                <p><strong>Recommended YouTube Links:</strong></p>
+                <ul>
+                    <li><a href="https://www.youtube.com/watch?v=FjI5wC1soNc" target="_blank">Introduction to Integration</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=-_9VlLOZk5I" target="_blank">Normal Distribution and Integration</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- Data Structures -->
+        <div class="course-section">
+            <h2><i class="fas fa-database"></i> Data Structures</h2>
+            <div class="course-details">
+                <p><strong>Focus:</strong> Efficient data storage and retrieval for algorithm design.</p>
+                <p>Data structures provide the foundation for handling and organizing data effectively in machine learning:</p>
+                <ul>
+                    <li><i class="fas fa-network-wired"></i> <strong>Trees:</strong> Essential for decision trees and random forests.</li>
+                    <li><i class="fas fa-memory"></i> <strong>Hash Maps:</strong> Crucial for fast lookups and feature encoding.</li>
+                </ul>
+                <p><strong>Example Problem:</strong> Construct a binary search tree (BST) and search for a value.
+                    <br><em>Problem:</em> Insert the values [8, 3, 10, 1, 6, 14] into a BST and search for the value 6.
+                    <br><em>Solution:</em> Create a tree by inserting the values sequentially. Traverse the tree using binary search to locate 6.
+                </p>
+                <p><strong>Real-World Application:</strong> Decision trees use tree-based structures to perform classification and regression tasks in machine learning.</p>
+                <p><strong>Recommended YouTube Links:</strong></p>
+                <ul>
+                    <li><a href="https://www.youtube.com/watch?v=oSWTXtMglKE" target="_blank">Binary Search Trees</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=wpNl-JwwplA" target="_blank">Decision Trees in Machine Learning</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- Linear Algebra -->
+        <div class="course-section">
+            <h2><i class="fas fa-vector-square"></i> Linear Algebra</h2>
+            <div class="course-details">
+                <p><strong>Focus:</strong> Matrices and vector operations for ML computations.</p>
+                <p>Linear algebra is at the heart of many machine learning techniques:</p>
+                <ul>
+                    <li><i class="fas fa-layer-group"></i> <strong>Matrices:</strong> Used to represent data, transformations, and operations in neural networks.</li>
+                    <li><i class="fas fa-math"></i> <strong>Eigenvalues and Eigenvectors:</strong> Critical in dimensionality reduction techniques like PCA (Principal Component Analysis).</li>
+                </ul>
+                <p><strong>Example Problem:</strong> Perform matrix multiplication for a neural network forward pass.
+                    <br><em>Problem:</em> Multiply a weight matrix <code>W = [[2, 3], [4, 5]]</code> with an input vector <code>X = [1, 2]</code>.
+                    <br><em>Solution:</em> Calculate <code>Y = W * X = [2*1 + 3*2, 4*1 + 5*2] = [8, 14]</code>.
+                </p>
+                <p><strong>Real-World Application:</strong> Neural networks rely on matrix operations for training and predictions.</p>
+                <p><strong>Recommended YouTube Links:</strong></p>
+                <ul>
+                    <li><a href="https://www.youtube.com/watch?v=kjBOesZCoqc" target="_blank">Linear Algebra Basics</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=0oGJTQCy4cQ" target="_blank">Matrix Multiplication in ML</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- Operating Systems -->
+        <div class="course-section">
+            <h2><i class="fas fa-server"></i> Operating Systems</h2>
+            <div class="course-details">
+                <p><strong>Focus:</strong> Process management, memory allocation, and optimization for ML systems.</p>
+                <p>Operating systems ensure efficient resource utilization in machine learning:</p>
+                <ul>
+                    <li><i class="fas fa-microchip"></i> <strong>Process Scheduling:</strong> Ensures ML tasks are executed efficiently.</li>
+                    <li><i class="fas fa-memory"></i> <strong>Memory Management:</strong> Vital for handling large datasets and model training.</li>
+                </ul>
+                <p><strong>Example Problem:</strong> Analyze the performance of a distributed ML task.
+                    <br><em>Problem:</em> Given a dataset partitioned into 4 nodes, measure the time taken to complete training using Spark.
+                    <br><em>Solution:</em> Use Spark logs to identify bottlenecks in memory usage or process scheduling and optimize configurations.
+                </p>
+                <p><strong>Real-World Application:</strong> Distributed ML frameworks like Apache Spark depend on OS-level optimizations for scalability.</p>
+                <p><strong>Recommended YouTube Links:</strong></p>
+                <ul>
+                    <li><a href="https://www.youtube.com/watch?v=SG1BJ3osVZs" target="_blank">Introduction to Operating Systems</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=Hdi1xR82CUg" target="_blank">Distributed Systems and ML</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- Algorithms -->
+        <section class="course-section">
+            <h2><i class="fas fa-code"></i> Algorithms</h2>
+            <div class="course-details">
+                <p><strong>Focus:</strong> Design and analysis of algorithms for ML efficiency.</p>
+                <p>Algorithms form the backbone of machine learning by providing solutions to computational problems:</p>
+                <ul>
+                    <li><i class="fas fa-search"></i> <strong>Search and Sort:</strong> Basic building blocks for data preprocessing.</li>
+                    <li><i class="fas fa-project-diagram"></i> <strong>Graph Algorithms:</strong> Used in recommendation systems and social network analysis.</li>
+                </ul>
+                <p><strong>Example Problem:</strong> Implement a sorting algorithm for feature preprocessing.
+                    <br><em>Problem:</em> Sort a list of features <code>[5, 2, 9, 1, 7]</code> using quicksort.
+                    <br><em>Solution:</em> Apply the quicksort algorithm to get <code>[1, 2, 5, 7, 9]</code>.
+                </p>
+                <p><strong>Real-World Application:</strong> Efficient sorting is used in data preprocessing pipelines to ensure clean and optimized data for machine learning tasks.</p>
+                <p><strong>Recommended YouTube Links:</strong></p>
+                <ul>
+                    <li><a href="https://www.youtube.com/watch?v=PgBzjlCcFvc" target="_blank">Introduction to Algorithms</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=SLauY6PpjW4" target="_blank">Quicksort Algorithm</a></li>
+                </ul>
+            </div>
+        </section>
+    </section>
+</div>
+            </div>
+
+               <div id="sidebar">
+						<div class="inner">
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+									<ul>
+										<li><a href="{{ url_for('index') }}">Homepage</a></li>
+                                        <li><a href="{{ url_for('resume_checker') }}">Resume Checker</a></li>
+                                        <li><a href="{{ url_for('job_matcher') }}">Job Matcher</a></li>
+                                        <li><a href="{{ url_for('job_qualifications') }}">Job Qualifications</a></li>
+                                        <li><a href="{{ url_for('school_work') }}">Relevant Coursework</a></li>
+                                        <li><a href="{{ url_for('machine_learning') }}">Machine Learning</a></li>
+										<li><a href="{{ url_for('webapp') }}">Making WebApps</a></li>
+										<li><a href="{{ url_for('java') }}">Java</a></li>
+										<li>
+											<span class="opener">More links</span>
+											<ul>
+												<li><a href="{{ url_for('python') }}">Python</a></li>
+												<li><a href="{{ url_for('js_ts') }}">Java/TypeScript</a></li>
+												<li><a href="{{ url_for('sql') }}">SQL</a></li>
+												<li><a href="{{ url_for('about_me') }}">About me</a></li>
+											</ul>
+										</li>
+									</ul>
+								</nav>
+								<section>
+									<header class="major">
+										<h2>More important information</h2>
+									</header>
+									<div class="mini-posts">
+										<article>
+											<img src="{{ url_for('static', filename='images/hackathon.jpg') }}" alt="">
+											<p>Hackathons are collaborative coding events where participants work in
+                                                teams to build innovative projects within a limited time. They provide
+                                                students with hands-on experience, improve problem-solving skills, and
+                                                foster teamwork. Hackathons also help students network, learn new technologies,
+                                                and build portfolios, making them valuable for career growth.</p>
+										</article>
+										<article>
+											<img src="{{ url_for('static', filename='images/GitHub.png') }}" alt="">
+											<p>If you do not know already, GitHub is a crucial tool for developers, offering version control
+                                                to track code changes, collaborate on projects, and manage workflows
+                                                efficiently. It enables teamwork through pull requests, fosters learning
+                                                via open-source projects, and serves as a portfolio to showcase skills to
+                                                employers. Its integration with tools like CI/CD pipelines makes it essential for modern software development.</p>
+										</article>
+										<article>
+											<img src="{{ url_for('static', filename='images/learn.png') }}" alt="">
+											<p>If you click the link below, you'll find a collection of the most useful
+                                                and important topics taught to computer science majors. It highlights
+                                                the connection between classroom learning and real-world job applications.
+                                            You can choose to learn form various topics and only the key points to help your
+                                            carer.</p>
+										</article>
+									</div>
+									<ul class="actions">
+										<li><a href="{{ url_for('school_work') }}" class="button">Learn now</a></li>
+									</ul>
+								</section>
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>Get in touch with me!</h2>
+									</header>
+									<p>Follow me and shoot me a message on LinkedIn or to my email! Always open to answer
+                                    any questions.</p>
+									<ul class="contact">
+										<li class="icon solid fa-envelope"><a href="#">dreuxcharles@ymail.com</a></li>
+										<li class="icon solid fa-home"><a href="#">https://www.linkedin.com/in/dreux-hebert-0117a5300/</a></li>
+									</ul>
+								</section>
+								<footer id="footer">
+									<p class="copyright">&copy; Untitled. All rights reserved.<a href=""></a><a href=""></a>  </p>
+								</footer>
+						</div>
+					</div>
+            </div>
+
+    </div>
+    <!-- Scripts -->
+    <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/browser.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/breakpoints.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/util.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

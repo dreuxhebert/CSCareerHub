@@ -1,0 +1,301 @@
+<!DOCTYPE HTML>
+<html lang="">
+<head>
+    <title>Machine Learning</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+</head>
+<body class="is-preload">
+    <div id="wrapper">
+        <div id="main">
+            <div class="inner">
+                <header id="header">
+                    <a href="{{ url_for('index') }}" class="logo"><strong>Dreux Hebert</strong> CS Student at KSU</a>
+                    <ul class="icons">
+                        <li><a href="https://www.instagram.com/dreu.x/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+                        <li><a href="https://github.com/dreuxhebert" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+                        <li><a href="https://www.linkedin.com/in/dreux-hebert-0117a5300/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                    </ul>
+                </header>
+                <!-- Content -->
+                <section>
+        <header class="main">
+            <h1>Getting Started with Machine Learning</h1>
+        </header>
+        <p>Welcome to your journey into Machine Learning! This section introduces the basics, provides resources, and guides
+            you through building foundational skills in ML. Explore the concepts, get hands-on with projects, and learn at your pace.</p>
+                    <!-- Popular YouTube Tutorials -->
+                    <h2>Top YouTube Tutorials to Get Started</h2>
+                    <ul>
+                        <li><a href="https://www.youtube.com/watch?v=GwIo3gDZCVQ" target="_blank">Simplilearn's Machine Learning Full Course</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=7eh4d6sabA0" target="_blank">Machine Learning Crash Course by Edureka</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=Gv9_4yMHFhI" target="_blank">Python Machine Learning Tutorial by Tech With Tim</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=JcI5Vnw0b2c" target="_blank">FreeCodeCamp Machine Learning for Beginners</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=HcqpanDadyQ" target="_blank">Andrew Ng's ML Course Walkthrough</a></li>
+                    </ul>
+
+        <div class="grid">
+            <article>
+                <header>
+                    <h3>What is Machine Learning?</h3>
+                </header>
+                <p>Machine Learning is a subset of Artificial Intelligence where computers learn patterns from data and make decisions without being explicitly programmed. ML powers technologies like recommendation systems, chatbots, and autonomous vehicles. It is broadly classified into supervised learning, unsupervised learning, and reinforcement learning.</p>
+                        </article>
+                        <article>
+                            <header>
+                                <h3>Beginner-Friendly Tools</h3>
+                            </header>
+                            <ul>
+                                <li><strong>Python:</strong> A versatile language with libraries like <code>scikit-learn</code>, <code>TensorFlow</code>, and <code>PyTorch</code>.</li>
+                                <li><strong>Jupyter Notebooks:</strong> Interactive coding environments for data visualization and ML experiments.</li>
+                                <li><strong>Google Colab:</strong> Free cloud-based tool to run ML models with no installation required, offering GPUs and TPUs for faster training.</li>
+                            </ul>
+                        </article>
+                        <article>
+                            <header>
+                                <h3>Steps to Build a Strong ML Foundation</h3>
+                            </header>
+                            <ol>
+                                <li>Learn the basics of Python programming and libraries like <code>numpy</code> and <code>pandas</code>.</li>
+                                <li>Understand data preprocessing, including handling missing values, feature scaling, and encoding categorical data.</li>
+                                <li>Explore foundational algorithms such as linear regression, decision trees, and support vector machines.</li>
+                                <li>Work on small projects like sentiment analysis, image classification, or price prediction.</li>
+                                <li>Gradually transition to advanced topics like deep learning, neural networks, and reinforcement learning.</li>
+                            </ol>
+                        </article>
+                    </div>
+
+                    <!-- Expanded Hands-On Project -->
+                    <header>
+                        <h3>Hands-On Project: Predicting House Prices</h3>
+                    </header>
+                    <p>This beginner-friendly project involves using the <strong>Linear Regression</strong> algorithm to predict house prices based on features like area, number of rooms, and location. We will expand it to include advanced topics as well.</p>
+
+                    <article>
+                        <header>
+                            <h4>8. Hyperparameter Tuning</h4>
+                        </header>
+                        <pre><code class="language-python">
+from sklearn.model_selection import GridSearchCV
+
+# Define parameter grid
+param_grid = {
+    'fit_intercept': [True, False],
+    'normalize': [True, False]
+}
+
+# Initialize GridSearchCV
+grid_search = GridSearchCV(estimator=LinearRegression(), param_grid=param_grid, cv=5)
+grid_search.fit(X_train, y_train)
+
+# Display best parameters
+print("Best Parameters:", grid_search.best_params_)
+                        </code></pre>
+                    </article>
+
+                    <article>
+                        <header>
+                            <h4>9. Incorporate Deep Learning with TensorFlow</h4>
+                        </header>
+                        <pre><code class="language-python">
+import tensorflow as tf
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Dense
+
+# Build a deep learning model
+model = Sequential([
+    Dense(64, activation='relu', input_shape=(X_train.shape[1],)),
+    Dense(32, activation='relu'),
+    Dense(1)
+])
+
+# Compile the model
+model.compile(optimizer='adam', loss='mean_squared_error')
+
+# Train the model
+model.fit(X_train, y_train, validation_data=(X_test, y_test), epochs=100, batch_size=10)
+
+# Evaluate the model
+loss = model.evaluate(X_test, y_test)
+print("Test Loss:", loss)
+                        </code></pre>
+                    </article>
+
+                    <article>
+                        <header>
+                            <h4>10. Visualize Model Performance</h4>
+                        </header>
+                        <pre><code class="language-python">
+# Plot actual vs predicted values
+import matplotlib.pyplot as plt
+
+y_pred = model.predict(X_test)
+plt.scatter(y_test, y_pred, color='blue')
+plt.xlabel("Actual Prices")
+plt.ylabel("Predicted Prices")
+plt.title("Actual vs Predicted Prices")
+plt.show()
+                        </code></pre>
+                    </article>
+
+                    <article>
+                        <header>
+                            <h4>11. Implement Feature Engineering</h4>
+                        </header>
+                        <pre><code class="language-python">
+# Feature Engineering: Creating new features from existing ones
+X['Price per Sq Ft'] = X['Price ($)'] / X['Area (sq ft)']
+
+# Standardize features
+from sklearn.preprocessing import StandardScaler
+scaler = StandardScaler()
+X_scaled = scaler.fit_transform(X)
+
+print("Scaled Features:\n", X_scaled)
+                        </code></pre>
+                    </article>
+
+                    <article>
+                        <header>
+                            <h4>12. Explore Other Regression Models</h4>
+                        </header>
+                        <pre><code class="language-python">
+from sklearn.ensemble import RandomForestRegressor
+from sklearn.svm import SVR
+
+# Initialize models
+rf_model = RandomForestRegressor(n_estimators=100, random_state=42)
+svr_model = SVR(kernel='rbf')
+
+# Train models
+rf_model.fit(X_train, y_train)
+svr_model.fit(X_train, y_train)
+
+# Evaluate models
+rf_score = rf_model.score(X_test, y_test)
+svr_score = svr_model.score(X_test, y_test)
+
+print("Random Forest R^2:", rf_score)
+print("SVR R^2:", svr_score)
+                        </code></pre>
+                    </article>
+
+                    <article>
+                        <header>
+                            <h4>13. Evaluate Model Interpretability</h4>
+                        </header>
+                        <pre><code class="language-python">
+# Feature importance for Random Forest
+importances = rf_model.feature_importances_
+features = X.columns
+
+# Plot feature importances
+plt.barh(features, importances, color='skyblue')
+plt.xlabel("Importance")
+plt.ylabel("Feature")
+plt.title("Feature Importance in Random Forest")
+plt.show()
+                        </code></pre>
+                    </article>
+
+                    <p>Continue exploring advanced topics such as classification, clustering, and reinforcement learning as you progress in your ML journey!</p>
+                </section>
+            </div>
+        </div>
+        <!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+									<ul>
+										<li><a href="{{ url_for('index') }}">Homepage</a></li>
+                                        <li><a href="{{ url_for('resume_checker') }}">Resume Checker</a></li>
+                                        <li><a href="{{ url_for('job_matcher') }}">Job Matcher</a></li>
+                                        <li><a href="{{ url_for('job_qualifications') }}">Job Qualifications</a></li>
+                                        <li><a href="{{ url_for('school_work') }}">Relevant Coursework</a></li>
+                                        <li><a href="{{ url_for('machine_learning') }}">Machine Learning</a></li>
+										<li><a href="{{ url_for('webapp') }}">Making WebApps</a></li>
+										<li><a href="{{ url_for('java') }}">Java</a></li>
+										<li>
+											<span class="opener">More links</span>
+											<ul>
+												<li><a href="{{ url_for('python') }}">Python</a></li>
+												<li><a href="{{ url_for('js_ts') }}">Java/TypeScript</a></li>
+												<li><a href="{{ url_for('sql') }}">SQL</a></li>
+												<li><a href="{{ url_for('about_me') }}">About me</a></li>
+											</ul>
+										</li>
+									</ul>
+								</nav>
+
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>More important information</h2>
+									</header>
+									<div class="mini-posts">
+										<article>
+											<img src="{{ url_for('static', filename='images/hackathon.jpg') }}" alt="">
+											<p>Hackathons are collaborative coding events where participants work in
+                                                teams to build innovative projects within a limited time. They provide
+                                                students with hands-on experience, improve problem-solving skills, and
+                                                foster teamwork. Hackathons also help students network, learn new technologies,
+                                                and build portfolios, making them valuable for career growth.</p>
+										</article>
+										<article>
+											<img src="{{ url_for('static', filename='images/GitHub.png') }}" alt="">
+											<p>If you do not know already, GitHub is a crucial tool for developers, offering version control
+                                                to track code changes, collaborate on projects, and manage workflows
+                                                efficiently. It enables teamwork through pull requests, fosters learning
+                                                via open-source projects, and serves as a portfolio to showcase skills to
+                                                employers. Its integration with tools like CI/CD pipelines makes it essential for modern software development.</p>
+										</article>
+										<article>
+											<img src="{{ url_for('static', filename='images/learn.png') }}" alt="">
+											<p>If you click the link below, you'll find a collection of the most useful
+                                                and important topics taught to computer science majors. It highlights
+                                                the connection between classroom learning and real-world job applications.
+                                            You can choose to learn form various topics and only the key points to help your
+                                            carer.</p>
+										</article>
+									</div>
+									<ul class="actions">
+										<li><a href="{{ url_for('school_work') }}" class="button">Learn now</a></li>
+									</ul>
+								</section>
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>Get in touch with me!</h2>
+									</header>
+									<p>Follow me and shoot me a message on LinkedIn or to my email! Always open to answer
+                                    any questions.</p>
+									<ul class="contact">
+										<li class="icon solid fa-envelope"><a href="#">dreuxcharles@ymail.com</a></li>
+										<li class="icon solid fa-home"><a href="#">https://www.linkedin.com/in/dreux-hebert-0117a5300/</a></li>
+									</ul>
+								</section>
+                            <!-- Footer -->
+                                 <footer id="footer">
+									<p class="copyright">&copy; Untitled. All rights reserved.<a href=""></a><a href=""></a>  </p>
+								</footer>
+                            </div>
+                    </div>
+    </div>
+    <!-- Scripts -->
+    <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/browser.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/breakpoints.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/util.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
+

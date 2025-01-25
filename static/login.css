@@ -1,0 +1,257 @@
+.form-container {
+  width: 350px;
+  height: 500px;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  padding: 20px 30px;
+}
+.title {
+  text-align: center;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+  "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  margin: 10px 0 30px 0;
+  font-size: 28px;
+  font-weight: 800;
+}
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-bottom: 15px;
+}
+.input {
+  border-radius: 20px;
+  border: 1px solid #c0c0c0;
+  outline: 0 !important;
+  box-sizing: border-box;
+  padding: 12px 15px;
+    width: 300px;
+}
+.page-link {
+  text-decoration: underline;
+  margin: 0;
+  text-align: end;
+  color: #747474;
+  text-decoration-color: #747474;
+}
+.page-link-label {
+  cursor: pointer;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+  "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+}
+.page-link-label:hover {
+  color: #000;
+}
+.form-btn {
+  padding: 10px 15px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+  "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  border-radius: 20px;
+  border: 0 !important;
+  outline: 0 !important;
+  background: teal;
+  color: white;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    width: 300px;
+}
+.form-btn:active {
+  box-shadow: none;
+}
+.sign-up-label {
+  margin: 0;
+  font-size: 10px;
+  color: #747474;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+  "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.sign-up-link {
+  margin-left: 1px;
+  font-size: 11px;
+  text-decoration: underline;
+  text-decoration-color: teal;
+  color: teal;
+  cursor: pointer;
+  font-weight: 800;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+  "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.buttons-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-top: 30px;
+  gap: 15px;
+}
+.github-login-button,
+.google-login-button {
+  border-radius: 20px;
+  box-sizing: border-box;
+  padding: 10px 15px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+  rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+  "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 11px;
+  gap: 5px;
+}
+.github-login-button {
+  background-color: #000;
+  color: #fff;
+  border: 2px solid #000;
+}
+.google-login-button {
+  border: 2px solid #747474;
+}
+.github-icon,
+.google-icon {
+  font-size: 18px;
+  margin-bottom: 1px;
+}
+body{
+  background: lightskyblue !important;
+}
+.error-message {
+    color: red;
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f2f2f2;
+  font-family: Arial, sans-serif;
+        }
+.error-message {
+  color: red;
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 10px;
+        }
+.github-login-button {
+  background-color: #24292e;
+  color: #fff;
+  border: 2px solid #24292e;
+  border-radius: 20px;
+  box-sizing: border-box;
+  padding: 8px 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Lucida Sans", Arial, sans-serif;
+  font-size: 10px;
+  gap: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  margin-bottom: 20px; /* Adds space below the GitHub button */
+}
+
+.github-login-button:hover {
+  background-color: #444d56; /* Slightly lighter hover color */
+  border-color: #444d56;
+  transform: translateY(-2px); /* Subtle lift effect */
+}
+
+.github-icon {
+  font-size: 18px; /* Match icon size with other buttons */
+  margin-bottom: 0;
+}
+.github-login-button a:visited {
+  color: #fff; /* Ensures the font stays white for visited links */
+}
+
+.github-login-button a:hover {
+  color: #fff; /* Ensures the font stays white on hover */
+  text-decoration: none; /* No underline on hover */
+}
+
+.github-login-button a:active {
+  color: #fff; /* Ensures the font stays white when clicked */
+}
+
+.sign-up-label {
+  margin-top: 20px; /* Adds space above the "Sign up" line */
+  font-size: 10px;
+  color: #747474;
+  font-family: "Lucida Sans", Arial, sans-serif;
+}
+buttons-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 20px;
+}
+
+.oauth-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f5f5f5; /* Light gray background */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px 20px;
+    width: 300px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+}
+
+.oauth-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.oauth-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 16px;
+    gap: 10px;
+    width: 300px;
+}
+
+.github-login-button {
+    background-color: #24292e;
+    color: #fff;
+    border: none;
+}
+.github-login-button .oauth-link {
+    color: #fff;
+}
+.google-login-button {
+    background-color: seagreen;
+    color: #fff;
+    border: none;
+}
+.google-login-button .oauth-link {
+    color: #fff;
+}
+.github-login-button:hover {
+    background-color: #333;
+}
+.google-login-button:hover {
+    background-color: green;
+}
+.oauth-button i {
+    font-size: 20px; /* Icon size */
+}
+

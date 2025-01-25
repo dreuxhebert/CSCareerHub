@@ -1,0 +1,139 @@
+<!DOCTYPE HTML>
+<html lang="">
+	<head>
+		<title>Job Matcher</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+	</head>
+	<body class="is-preload">
+			<div id="wrapper">
+					<div id="main">
+						<div class="inner">
+								<header id="header">
+									<a href="{{ url_for('about_me') }}" class="logo"><strong>Dreux Hebert</strong> CS Student at KSU</a>
+									<ul class="icons">
+										<li><a href="https://www.instagram.com/dreu.x/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+                                        <li><a href="https://github.com/dreuxhebert" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+                                         <li><a href="https://www.linkedin.com/in/dreux-hebert-0117a5300/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+									</ul>
+								</header>
+                <section>
+                    <header class="main">
+                        <h1>Job Matcher</h1>
+                    </header>
+                    <!-- Upload Area -->
+                    <div id="upload-area" style="border: 2px dashed #ccc; border-radius: 10px; padding: 20px; text-align: center; margin-bottom: 20px;">
+                        <h2>Upload Your Resume</h2>
+                        <p>Drag and drop your resume file here, or click to select a file.</p>
+                        <form action="{{ url_for('job_matcher') }}" method="POST" enctype="multipart/form-data">
+                            <input type="file" name="file" id="resume-upload" accept=".pdf, .docx" style="display: none;" onchange="this.form.submit()">
+                            <label for="resume-upload" style="cursor: pointer; color: #007bff; text-decoration: underline;">Choose File</label>
+                        </form>
+                    </div>
+                    <!-- Feedback Section -->
+                    <div id="feedback-section" style="margin-top: 20px;">
+                        <h2>Recommended Jobs</h2>
+                        <div id="recommendations" style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background: #f9f9f9;">
+                            {% if recommendations %}
+                                <ul>
+                                    {% for job, score in recommendations %}
+                                        <li><strong>{{ job }}</strong>: {{ score|round(2) }}% match</li>
+                                    {% endfor %}
+                                </ul>
+                            {% else %}
+                                <em>Upload your resume to get job recommendations.</em>
+                            {% endif %}
+                        </div>
+                    </div>
+                </section>
+						</div>
+					</div>
+					<div id="sidebar">
+						<div class="inner">
+								<nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+									<ul>
+										<li><a href="{{ url_for('index') }}">Homepage</a></li>
+                                        <li><a href="{{ url_for('resume_checker') }}">Resume Checker</a></li>
+                                        <li><a href="{{ url_for('job_matcher') }}">Job Matcher</a></li>
+                                        <li><a href="{{ url_for('job_qualifications') }}">Job Qualifications</a></li>
+                                        <li><a href="{{ url_for('school_work') }}">Relevant Coursework</a></li>
+                                        <li><a href="{{ url_for('machine_learning') }}">Machine Learning</a></li>
+										<li><a href="{{ url_for('webapp') }}">Making WebApps</a></li>
+										<li><a href="{{ url_for('java') }}">Java</a></li>
+										<li>
+											<span class="opener">More links</span>
+											<ul>
+												<li><a href="{{ url_for('python') }}">Python</a></li>
+												<li><a href="{{ url_for('js_ts') }}">Java/TypeScript</a></li>
+												<li><a href="{{ url_for('sql') }}">SQL</a></li>
+												<li><a href="{{ url_for('about_me') }}">About me</a></li>
+											</ul>
+										</li>
+									</ul>
+								</nav>
+								<section>
+									<header class="major">
+										<h2>More important information</h2>
+									</header>
+									<div class="mini-posts">
+										<article>
+											<img src="{{ url_for('static', filename='images/hackathon.jpg') }}" alt="">
+											<p>Hackathons are collaborative coding events where participants work in
+                                                teams to build innovative projects within a limited time. They provide
+                                                students with hands-on experience, improve problem-solving skills, and
+                                                foster teamwork. Hackathons also help students network, learn new technologies,
+                                                and build portfolios, making them valuable for career growth.</p>
+										</article>
+										<article>
+											<img src="{{ url_for('static', filename='images/GitHub.png') }}" alt="">
+											<p>If you do not know already, GitHub is a crucial tool for developers, offering version control
+                                                to track code changes, collaborate on projects, and manage workflows
+                                                efficiently. It enables teamwork through pull requests, fosters learning
+                                                via open-source projects, and serves as a portfolio to showcase skills to
+                                                employers. Its integration with tools like CI/CD pipelines makes it essential for modern software development.</p>
+										</article>
+										<article>
+											<img src="{{ url_for('static', filename='images/learn.png') }}" alt="">
+											<p>If you click the link below, you'll find a collection of the most useful
+                                                and important topics taught to computer science majors. It highlights
+                                                the connection between classroom learning and real-world job applications.
+                                            You can choose to learn form various topics and only the key points to help your
+                                            carer.</p>
+										</article>
+									</div>
+									<ul class="actions">
+										<li><a href="{{ url_for('school_work') }}" class="button">Learn now</a></li>
+									</ul>
+								</section>
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>Get in touch with me!</h2>
+									</header>
+									<p>Follow me and shoot me a message on LinkedIn or to my email! Always open to answer
+                                    any questions.</p>
+									<ul class="contact">
+										<li class="icon solid fa-envelope"><a href="#">dreuxcharles@ymail.com</a></li>
+										<li class="icon solid fa-home"><a href="#">https://www.linkedin.com/in/dreux-hebert-0117a5300/</a></li>
+									</ul>
+								</section>
+							<!-- Footer -->
+								<footer id="footer">
+									<p class="copyright">&copy; Untitled. All rights reserved.<a href=""></a><a href=""></a>  </p>
+								</footer>
+						</div>
+					</div>
+			</div>
+		<!-- Scripts -->
+			<script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+            <script src="{{ url_for('static', filename='js/browser.min.js') }}"></script>
+            <script src="{{ url_for('static', filename='js/breakpoints.min.js') }}"></script>
+            <script src="{{ url_for('static', filename='js/util.js') }}"></script>
+            <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+	</body>
+</html>

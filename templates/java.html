@@ -1,0 +1,304 @@
+<!DOCTYPE HTML>
+<html lang="">
+<head>
+    <title>Java</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-java.min.js"></script>
+</head>
+<body class="is-preload">
+    <div id="wrapper">
+        <div id="main">
+            <div class="inner">
+                <header id="header">
+                    <a href="{{ url_for('index') }}" class="logo"><strong>Dreux Hebert</strong> CS Student at KSU</a>
+                    <ul class="icons">
+                        <li><a href="https://www.instagram.com/dreu.x/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+                        <li><a href="https://github.com/dreuxhebert" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+                        <li><a href="https://www.linkedin.com/in/dreux-hebert-0117a5300/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                    </ul>
+                </header>
+                <!-- Content -->
+                <section>
+    <header class="main">
+<section>
+    <header>
+        <h2>Tools and Setup</h2>
+    </header>
+    <p>To get started with Java, you'll need the following tools:</p>
+    <ul>
+        <li><strong>Java Development Kit (JDK):</strong> Download and install the latest JDK from <a href="https://www.oracle.com/java/technologies/javase-downloads.html" target="_blank">Oracle</a> or use <a href="https://adoptium.net/" target="_blank">Eclipse Adoptium</a>.</li>
+        <li><strong>Integrated Development Environment (IDE):</strong> Recommended IDEs include:
+            <ul>
+                <li><strong>IntelliJ IDEA:</strong> A powerful IDE for Java development.</li>
+                <li><strong>Eclipse:</strong> A free, open-source IDE widely used in the industry.</li>
+                <li><strong>VS Code:</strong> Lightweight with excellent Java extensions.</li>
+            </ul>
+        </li>
+    </ul>
+    <p>After installing the JDK, set up your <code>JAVA_HOME</code> environment variable and add the <code>bin</code> directory to your system's PATH to enable running Java commands in the terminal.</p>
+
+    <ul>
+                        <li><a href="https://www.youtube.com/watch?v=grEKMHGYyns" target="_blank">Java Programming Tutorial - Full Course (freeCodeCamp)</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=GoXwIVyNvX0" target="_blank">Java Full Course - Learn Java in 8 Hours (CodeWithHarry)</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=eIrMbAQSU34" target="_blank">Java Tutorial for Beginners (Programming with Mosh)</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=xk4_1vDrzzo" target="_blank">Java for Beginners - Full Tutorial (Bro Code)</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=HhlVV5X9wcA" target="_blank">Complete Java Course (Amigoscode)</a></li>
+                    </ul>
+
+
+</section>
+
+<section>
+    <header>
+        <h2>Your First Java Program</h2>
+    </header>
+    <p>Let’s start by creating a simple "Hello, World!" program in Java. Here's how it looks:</p>
+    <pre><code class="language-java">
+public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
+}
+    </code></pre>
+    <p><strong>Steps to Run:</strong></p>
+    <ol>
+        <li>Save the file as <code>HelloWorld.java</code>.</li>
+        <li>Open your terminal or IDE and navigate to the file's directory.</li>
+        <li>Compile the program:
+            <pre><code class="language-bash">javac HelloWorld.java</code></pre>
+        </li>
+        <li>Run the compiled program:
+            <pre><code class="language-bash">java HelloWorld</code></pre>
+        </li>
+    </ol>
+</section>
+
+<section>
+    <header>
+        <h2>Java Basics</h2>
+    </header>
+    <p>Here are some basic concepts and examples to get you started:</p>
+
+    <h3>Variables</h3>
+    <p>Variables are used to store data. Here's an example:</p>
+    <pre><code class="language-java">
+public class VariablesExample {
+    public static void main(String[] args) {
+        int number = 42; // Integer
+        double price = 19.99; // Decimal
+        String message = "Hello, Java!"; // Text
+        System.out.println("Number: " + number);
+        System.out.println("Price: $" + price);
+        System.out.println("Message: " + message);
+    }
+}
+    </code></pre>
+
+    <h3>Control Flow</h3>
+    <p>Control flow statements like <code>if</code>, <code>else</code>, and loops are fundamental in Java:</p>
+    <pre><code class="language-java">
+public class ControlFlowExample {
+    public static void main(String[] args) {
+        int number = 10;
+
+        // If-Else Statement
+        if (number > 5) {
+            System.out.println("Number is greater than 5");
+        } else {
+            System.out.println("Number is 5 or less");
+        }
+
+        // For Loop
+        for (int i = 0; i < 5; i++) {
+            System.out.println("Count: " + i);
+        }
+    }
+}
+    </code></pre>
+</section>
+
+<section>
+    <header>
+        <h2>Object-Oriented Programming</h2>
+    </header>
+    <p>Java is an object-oriented programming (OOP) language. Here's an example of creating a simple class with a method:</p>
+    <pre><code class="language-java">
+class Car {
+    String brand;
+    int speed;
+
+    // Constructor
+    Car(String brand, int speed) {
+        this.brand = brand;
+        this.speed = speed;
+    }
+
+    // Method
+    void displayInfo() {
+        System.out.println("Brand: " + brand + ", Speed: " + speed + " km/h");
+    }
+}
+
+public class OOPExample {
+    public static void main(String[] args) {
+        Car car = new Car("Toyota", 120);
+        car.displayInfo();
+    }
+}
+    </code></pre>
+</section>
+
+<section>
+    <header>
+        <h2>Working with Files</h2>
+    </header>
+    <p>Java makes it easy to read and write files. Here's an example of writing to a file:</p>
+    <pre><code class="language-java">
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class FileExample {
+    public static void main(String[] args) {
+        try {
+            FileWriter writer = new FileWriter("example.txt");
+            writer.write("Hello, File!");
+            writer.close();
+            System.out.println("File written successfully!");
+        } catch (IOException e) {
+            System.out.println("An error occurred: " + e.getMessage());
+        }
+    }
+}
+    </code></pre>
+</section>
+
+<section>
+    <header>
+        <h2>Connecting to a Database</h2>
+    </header>
+    <p>Java provides robust support for database interaction using JDBC. Here's an example of connecting to a PostgreSQL database:</p>
+    <pre><code class="language-java">
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+public class DatabaseExample {
+    public static void main(String[] args) {
+        String url = "jdbc:postgresql://localhost:5432/mydatabase";
+        String user = "username";
+        String password = "password";
+
+        try (Connection conn = DriverManager.getConnection(url, user, password)) {
+            System.out.println("Connected to the database!");
+        } catch (SQLException e) {
+            System.out.println("Database connection failed: " + e.getMessage());
+        }
+    }
+}
+    </code></pre>
+</section>
+
+<section>
+    <header>
+        <h2>Final Notes</h2>
+    </header>
+    <p>Java is a powerful language with endless possibilities. Start small, practice regularly, and explore advanced topics like multithreading, web development (e.g., with Spring Boot), and mobile development (e.g., with Android Studio). Happy coding!</p>
+</section>
+
+            </div>
+        </div>
+       <!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+									<ul>
+										<li><a href="{{ url_for('index') }}">Homepage</a></li>
+                                        <li><a href="{{ url_for('resume_checker') }}">Resume Checker</a></li>
+                                        <li><a href="{{ url_for('job_matcher') }}">Job Matcher</a></li>
+                                        <li><a href="{{ url_for('job_qualifications') }}">Job Qualifications</a></li>
+                                        <li><a href="{{ url_for('school_work') }}">Relevant Coursework</a></li>
+                                        <li><a href="{{ url_for('machine_learning') }}">Machine Learning</a></li>
+										<li><a href="{{ url_for('webapp') }}">Making WebApps</a></li>
+										<li><a href="{{ url_for('java') }}">Java</a></li>
+										<li>
+											<span class="opener">More links</span>
+											<ul>
+												<li><a href="{{ url_for('python') }}">Python</a></li>
+												<li><a href="{{ url_for('js_ts') }}">Java/TypeScript</a></li>
+												<li><a href="{{ url_for('sql') }}">SQL</a></li>
+												<li><a href="{{ url_for('about_me') }}">About me</a></li>
+											</ul>
+										</li>
+									</ul>
+								</nav>
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>More important information</h2>
+									</header>
+									<div class="mini-posts">
+										<article>
+											<img src="{{ url_for('static', filename='images/hackathon.jpg') }}" alt="">
+											<p>Hackathons are collaborative coding events where participants work in
+                                                teams to build innovative projects within a limited time. They provide
+                                                students with hands-on experience, improve problem-solving skills, and
+                                                foster teamwork. Hackathons also help students network, learn new technologies,
+                                                and build portfolios, making them valuable for career growth.</p>
+										</article>
+										<article>
+											<img src="{{ url_for('static', filename='images/GitHub.png') }}" alt="">
+											<p>If you do not know already, GitHub is a crucial tool for developers, offering version control
+                                                to track code changes, collaborate on projects, and manage workflows
+                                                efficiently. It enables teamwork through pull requests, fosters learning
+                                                via open-source projects, and serves as a portfolio to showcase skills to
+                                                employers. Its integration with tools like CI/CD pipelines makes it essential for modern software development.</p>
+										</article>
+										<article>
+											<img src="{{ url_for('static', filename='images/learn.png') }}" alt="">
+											<p>If you click the link below, you'll find a collection of the most useful
+                                                and important topics taught to computer science majors. It highlights
+                                                the connection between classroom learning and real-world job applications.
+                                            You can choose to learn form various topics and only the key points to help your
+                                            carer.</p>
+										</article>
+									</div>
+									<ul class="actions">
+										<li><a href="{{ url_for('school_work') }}" class="button">Learn now</a></li>
+									</ul>
+								</section>
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>Get in touch with me!</h2>
+									</header>
+									<p>Follow me and shoot me a message on LinkedIn or to my email! Always open to answer
+                                    any questions.</p>
+									<ul class="contact">
+										<li class="icon solid fa-envelope"><a href="#">dreuxcharles@ymail.com</a></li>
+										<li class="icon solid fa-home"><a href="#">https://www.linkedin.com/in/dreux-hebert-0117a5300/</a></li>
+									</ul>
+								</section>
+                            <!-- Footer -->
+                                 <footer id="footer">
+									<p class="copyright">&copy; Untitled. All rights reserved.<a href=""></a><a href=""></a>  </p>
+								</footer>
+                        </div>
+                    </div>
+    </div>
+    <!-- Scripts -->
+    <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/browser.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/breakpoints.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/util.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,328 @@
+<!DOCTYPE HTML>
+<html lang="">
+<head>
+    <title>JavaScript/TypeScript</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-typescript.min.js"></script>
+</head>
+<body class="is-preload">
+    <div id="wrapper">
+        <div id="main">
+            <div class="inner">
+                <header id="header">
+                    <a href="{{ url_for('index') }}" class="logo"><strong>Dreux Hebert</strong> CS Student at KSU</a>
+                    <ul class="icons">
+                        <li><a href="https://www.instagram.com/dreu.x/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+                        <li><a href="https://github.com/dreuxhebert" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+                        <li><a href="https://www.linkedin.com/in/dreux-hebert-0117a5300/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                    </ul>
+                </header>
+
+                <!-- Content -->
+                <section>
+    <header>
+        <h2>Getting Started</h2>
+    </header>
+    <p>To begin coding in JavaScript and TypeScript, you’ll need a few tools:</p>
+    <ul>
+        <li><strong>Text Editor or IDE:</strong>
+            <ul>
+                <li><strong>Visual Studio Code:</strong> Ideal for JS and TS development due to its rich ecosystem of extensions.</li>
+                <li><strong>WebStorm:</strong> A powerful IDE tailored for JavaScript frameworks.</li>
+            </ul>
+        </li>
+        <li><strong>Node.js:</strong> Install <a href="https://nodejs.org/" target="_blank">Node.js</a> to execute JavaScript outside the browser and manage packages with <code>npm</code> (Node Package Manager).</li>
+        <li><strong>TypeScript:</strong> Install TypeScript globally using npm:
+            <pre><code class="language-bash">npm install -g typescript</code></pre>
+        </li>
+    </ul>
+                    <ul>
+    <li><a href="https://www.youtube.com/watch?v=PkZNo7MFNFg" target="_blank">JavaScript Tutorial for Beginners - Full Course (freeCodeCamp)</a></li>
+    <li><a href="https://www.youtube.com/watch?v=W6NZfCO5SIk" target="_blank">JavaScript Tutorial for Beginners (Programming with Mosh)</a></li>
+    <li><a href="https://www.youtube.com/watch?v=jS4aFq5-91M" target="_blank">JavaScript Full Course - Learn JavaScript in 6 Hours (CodeWithHarry)</a></li>
+    <li><a href="https://www.youtube.com/watch?v=hdI2bqOjy3c" target="_blank">JavaScript Crash Course For Beginners (Traversy Media)</a></li>
+    <li><a href="https://www.youtube.com/watch?v=R-JBNSG2Cm8" target="_blank">Complete JavaScript Course (Amigoscode)</a></li>
+</ul>
+
+</section>
+
+<section>
+    <header>
+        <h2>Your First JavaScript Program</h2>
+    </header>
+    <p>Let’s start with a simple "Hello, World!" example in JavaScript:</p>
+    <pre><code class="language-javascript">
+// JavaScript Hello World
+console.log("Hello, World!");
+    </code></pre>
+    <p><strong>Run this in:</strong></p>
+    <ul>
+        <li>The browser console (right-click > Inspect > Console).</li>
+        <li>Node.js:
+            <pre><code class="language-bash">node hello.js</code></pre>
+        </li>
+    </ul>
+</section>
+
+<section>
+    <header>
+        <h2>Your First TypeScript Program</h2>
+    </header>
+    <p>Here’s the same "Hello, World!" example written in TypeScript:</p>
+    <pre><code class="language-typescript">
+// TypeScript Hello World
+const message: string = "Hello, World!";
+console.log(message);
+    </code></pre>
+    <p><strong>Compile and Run:</strong></p>
+    <ol>
+        <li>Save the file as <code>hello.ts</code>.</li>
+        <li>Compile it to JavaScript:
+            <pre><code class="language-bash">tsc hello.ts</code></pre>
+        </li>
+        <li>Run the compiled file:
+            <pre><code class="language-bash">node hello.js</code></pre>
+        </li>
+    </ol>
+</section>
+
+<section>
+    <header>
+        <h2>JavaScript Basics</h2>
+    </header>
+    <h3>Variables</h3>
+    <p>JavaScript uses <code>var</code>, <code>let</code>, and <code>const</code> for variable declarations:</p>
+    <pre><code class="language-javascript">
+// Variables in JavaScript
+let name = "Alice";  // Block-scoped
+const age = 30;      // Constant
+var city = "New York"; // Function-scoped
+
+console.log(`${name} is ${age} years old and lives in ${city}.`);
+    </code></pre>
+
+    <h3>Control Flow</h3>
+    <p>Conditional statements and loops are used to control the flow of a program:</p>
+    <pre><code class="language-javascript">
+// Conditional Statement
+let num = 10;
+if (num > 5) {
+    console.log("Greater than 5");
+} else {
+    console.log("5 or less");
+}
+
+// Loop
+for (let i = 0; i < 3; i++) {
+    console.log(`Iteration: ${i}`);
+}
+    </code></pre>
+</section>
+
+<section>
+    <header>
+        <h2>TypeScript Basics</h2>
+    </header>
+    <h3>Typing</h3>
+    <p>TypeScript enforces types to make your code more robust:</p>
+    <pre><code class="language-typescript">
+// Variables with Types
+let username: string = "Alice";
+let isActive: boolean = true;
+let scores: number[] = [95, 88, 76];
+
+console.log(`${username} is active: ${isActive}`);
+    </code></pre>
+
+    <h3>Interfaces</h3>
+    <p>Use interfaces to define object shapes:</p>
+    <pre><code class="language-typescript">
+// Interface Example
+interface User {
+    name: string;
+    age: number;
+}
+
+const user: User = {
+    name: "Alice",
+    age: 25,
+};
+
+console.log(user);
+    </code></pre>
+</section>
+
+<section>
+    <header>
+        <h2>DOM Manipulation with JavaScript</h2>
+    </header>
+    <p>JavaScript interacts with HTML to create dynamic content:</p>
+    <pre><code class="language-javascript">
+// Access and Modify DOM
+document.getElementById("greet").textContent = "Hello from JavaScript!";
+    </code></pre>
+    <p><strong>HTML Example:</strong></p>
+    <pre><code class="language-html">
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JS DOM Example</title>
+</head>
+<body>
+    <h1 id="greet">Welcome</h1>
+    <script src="script.js"></script>
+</body>
+</html>
+    </code></pre>
+</section>
+
+<section>
+    <header>
+        <h2>Object-Oriented Programming</h2>
+    </header>
+    <p>Both JS and TS support object-oriented programming:</p>
+    <pre><code class="language-typescript">
+// TypeScript Class Example
+class Person {
+    name: string;
+
+    constructor(name: string) {
+        this.name = name;
+    }
+
+    greet() {
+        return `Hello, ${this.name}!`;
+    }
+}
+
+const person = new Person("Alice");
+console.log(person.greet());
+    </code></pre>
+</section>
+
+<section>
+    <header>
+        <h2>Modules and Imports</h2>
+    </header>
+    <p>Organize your code into reusable modules:</p>
+    <pre><code class="language-javascript">
+// math.js
+export function add(a, b) {
+    return a + b;
+}
+
+// main.js
+import { add } from './math.js';
+console.log(add(2, 3));
+    </code></pre>
+</section>
+
+<section>
+    <header>
+        <h2>Final Tips for Beginners</h2>
+    </header>
+    <ul>
+        <li>Start by mastering JavaScript fundamentals before diving into TypeScript.</li>
+        <li>Use browser developer tools to debug and experiment with JavaScript code.</li>
+        <li>Practice building small projects like a to-do list or a calculator to strengthen your skills.</li>
+        <li>Explore frameworks like React (JS) or Angular (TS) for advanced development.</li>
+    </ul>
+</section>
+            </div>
+        </div>
+					<div id="sidebar">
+						<div class="inner">
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+									<ul>
+										<li><a href="{{ url_for('index') }}">Homepage</a></li>
+                                        <li><a href="{{ url_for('resume_checker') }}">Resume Checker</a></li>
+                                        <li><a href="{{ url_for('job_matcher') }}">Job Matcher</a></li>
+                                        <li><a href="{{ url_for('job_qualifications') }}">Job Qualifications</a></li>
+                                        <li><a href="{{ url_for('school_work') }}">Relevant Coursework</a></li>
+                                        <li><a href="{{ url_for('machine_learning') }}">Machine Learning</a></li>
+										<li><a href="{{ url_for('webapp') }}">Making WebApps</a></li>
+										<li><a href="{{ url_for('java') }}">Java</a></li>
+										<li>
+											<span class="opener">More links</span>
+											<ul>
+												<li><a href="{{ url_for('python') }}">Python</a></li>
+												<li><a href="{{ url_for('js_ts') }}">Java/TypeScript</a></li>
+												<li><a href="{{ url_for('sql') }}">SQL</a></li>
+												<li><a href="{{ url_for('about_me') }}">About me</a></li>
+											</ul>
+										</li>
+									</ul>
+								</nav>
+
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>More important information</h2>
+									</header>
+									<div class="mini-posts">
+										<article>
+											<img src="{{ url_for('static', filename='images/hackathon.jpg') }}" alt="">
+											<p>Hackathons are collaborative coding events where participants work in
+                                                teams to build innovative projects within a limited time. They provide
+                                                students with hands-on experience, improve problem-solving skills, and
+                                                foster teamwork. Hackathons also help students network, learn new technologies,
+                                                and build portfolios, making them valuable for career growth.</p>
+										</article>
+										<article>
+											<img src="{{ url_for('static', filename='images/GitHub.png') }}" alt="">
+											<p>If you do not know already, GitHub is a crucial tool for developers, offering version control
+                                                to track code changes, collaborate on projects, and manage workflows
+                                                efficiently. It enables teamwork through pull requests, fosters learning
+                                                via open-source projects, and serves as a portfolio to showcase skills to
+                                                employers. Its integration with tools like CI/CD pipelines makes it essential for modern software development.</p>
+										</article>
+										<article>
+											<img src="{{ url_for('static', filename='images/learn.png') }}" alt="">
+											<p>If you click the link below, you'll find a collection of the most useful
+                                                and important topics taught to computer science majors. It highlights
+                                                the connection between classroom learning and real-world job applications.
+                                            You can choose to learn form various topics and only the key points to help your
+                                            carer.</p>
+										</article>
+									</div>
+									<ul class="actions">
+										<li><a href="{{ url_for('school_work') }}" class="button">Learn now</a></li>
+									</ul>
+								</section>
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>Get in touch with me!</h2>
+									</header>
+									<p>Follow me and shoot me a message on LinkedIn or to my email! Always open to answer
+                                    any questions.</p>
+									<ul class="contact">
+										<li class="icon solid fa-envelope"><a href="#">dreuxcharles@ymail.com</a></li>
+										<li class="icon solid fa-home"><a href="#">https://www.linkedin.com/in/dreux-hebert-0117a5300/</a></li>
+									</ul>
+								</section>
+                            <!-- Footer -->
+                                 <footer id="footer">
+									<p class="copyright">&copy; Untitled. All rights reserved.<a href=""></a><a href=""></a>  </p>
+								</footer>
+                            </div>
+                    </div>
+    </div>
+    <!-- Scripts -->
+    <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/browser.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/breakpoints.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/util.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

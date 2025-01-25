@@ -1,0 +1,247 @@
+<!DOCTYPE HTML>
+<html lang="">
+	<head>
+		<title>CSCareerHub</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+	</head>
+	<body class="is-preload">
+			<div id="wrapper">
+					<div id="main">
+						<div class="inner">
+								<header id="header">
+									<a href="{{ url_for('about_me') }}" class="logo"><strong>Dreux Hebert</strong> CS Student at KSU</a>
+									<ul class="icons">
+										<li><a href="https://www.instagram.com/dreu.x/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+                                         <li><a href="https://github.com/dreuxhebert" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+                                         <li><a href="https://www.linkedin.com/in/dreux-hebert-0117a5300/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+									</ul>
+								</header>
+								<section id="banner">
+									<div class="content">
+										<header>
+											<h1>Hello, Welcome to CSCareerHub <br />
+											</h1>
+											<p>A free, fully responsive platform created by a student, for students!</p>
+										</header>
+										<p>My platform offers a variety of tools to help you get internship-ready and discover
+                                            opportunities that match your skills. Not quite there yet? No problem! You can
+                                            explore learning paths on topics like Machine Learning and more. Additionally,
+                                            stay ahead of the curve by exploring what's trending in the industry, powered
+                                            by AI that analyzes the latest qualifications from top internships and jobs.
+                                            My goal is to guide lost CS students toward the next step in their career journey
+                                            and help them achieve their aspirations!</p>
+									</div>
+									<span class="image object">
+										<img src="{{ url_for('static', filename='images/LOGO.png') }}" alt="">
+									</span>
+								</section>
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>Different Programs</h2>
+									</header>
+									<div class="features">
+										<article>
+											<a href="{{ url_for('resume_checker') }}" class="icon-link">
+                                             <span class="icon solid fa-file"></span></a>
+											<div class="content">
+												<h3>Check to see if your resume is internship ready!</h3>
+												<p>Ensure your resume stands out with personalized feedback and guidance.
+                                                    AI will score your resume to see how Internship/Job ready you are.</p>
+											</div>
+										</article>
+										<article>
+                                            <a href="{{ url_for('job_matcher') }}" class="icon-link">
+                                                <span class="icon solid fa-briefcase"></span></a>
+											<div class="content">
+												<h3>What internships/Jobs would make a good fit for you</h3>
+												<p>Discover opportunities tailored to your skills and interests.
+                                                    Match your qualifications with internships and jobs designed to align with your career goals.</p>
+											</div>
+										</article>
+										<article>
+                                            <a href="{{ url_for('job_qualifications') }}" class="icon-link">
+                                                <span class="icon solid fa-rocket"></span></a>
+											<div class="content">
+												<h3>Top Qualifications for the internship/Job of your choice</h3>
+												<p>Explore the key qualifications and skills employers look for in your
+                                                    dream role. Stay ahead by understanding industry trends and expectations.</p>
+											</div>
+										</article>
+										<article>
+                                             <a href="{{ url_for('school_work') }}" class="icon-link">
+                                                 <span class="icon solid fa-graduation-cap"></span></a>
+											<div class="content">
+												<h3>Relevant Coursework</h3>
+												<p> Click the icon to check out a list of the most important topics
+                                                    for computer science majors. It shows how what you learn in class connects
+                                                    to real-world jobs and helps you focus on the key skills needed to build your career. </p>
+											</div>
+										</article>
+									</div>
+								</section>
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>Ready to learn? Chose from any topic below and get started!</h2>
+									</header>
+									<div class="posts">
+										<article>
+											<img src="{{ url_for('static', filename='images/MLL.jpg') }}" alt="">
+											<h3>Machine Learning</h3>
+											<p>Machine Learning is a branch of artificial intelligence that allows systems
+                                                to learn and improve from data without being explicitly programmed. It's
+                                                widely used in applications such as recommendation systems, image recognition, and predictive analytics.</p>
+											<ul class="actions">
+												<li><a href="{{ url_for('machine_learning') }}" class="button">Learn now!</a></li>
+											</ul>
+										</article>
+										<article>
+											<img src="{{ url_for('static', filename='images/Webapp.png') }}" alt="">
+											<h3>Making Webapps</h3>
+											<p>Creating web applications involves designing and developing interactive
+                                                platforms accessible through a browser. It includes working with frontend
+                                                and backend technologies to deliver seamless user experiences and powerful
+                                                functionality. Like this one!</p>
+											<ul class="actions">
+												<li><a href="{{ url_for('webapp') }}" class="button">Learn now!</a></li>
+											</ul>
+										</article>
+										<article>
+											<img src="{{ url_for('static', filename='images/Javaa.png') }}" alt="">
+											<h3>Java</h3>
+											<p>Java is a versatile, object-oriented programming language widely used for
+                                                building cross-platform applications. Its stability and performance make
+                                                it ideal for enterprise-level software, mobile apps, and web services.</p>
+											<ul class="actions">
+												<li><a href="{{ url_for('java') }}" class="button">Learn now!</a></li>
+											</ul>
+										</article>
+										<article>
+											<img src="{{ url_for('static', filename='images/Python.png') }}" alt="" class = "python-logo">
+											<h3>Python</h3>
+											<p>Python is a beginner-friendly and versatile programming language known for
+                                                its simplicity and readability. It's used in web development, data science,
+                                                machine learning, and automation due to its extensive libraries and active community.</p>
+											<ul class="actions">
+												<li><a href="{{ url_for('python') }}" class="button">Learn now!</a></li>
+											</ul>
+										</article>
+										<article>
+											<img src="{{ url_for('static', filename='images/js.png') }}" alt="JavaScript Logo" class="js-logo">
+											<h3>Java/TypeScript</h3>
+											<p>JavaScript is the backbone of modern web development, enabling dynamic and
+                                                interactive web pages. TypeScript, a superset of JavaScript, adds strong
+                                                typing and advanced features, making large-scale projects more manageable and error-free.</p>
+											<ul class="actions">
+												<li><a href="{{ url_for('js_ts') }}" class="button">Learn now!</a></li>
+											</ul>
+										</article>
+										<article>
+											<img src="{{ url_for('static', filename='images/SQL.png') }}" alt="" class = "sql-logo">
+											<h3>SQL</h3>
+											<p>SQL (Structured Query Language) is the standard language for managing and
+                                                querying databases. It allows users to store, retrieve, and manipulate data
+                                                efficiently, serving as the backbone of modern data-driven applications.</p>
+											<ul class="actions">
+												<li><a href="{{ url_for('sql') }}" class="button">Learn now!</a></li>
+											</ul>
+										</article>
+									</div>
+								</section>
+
+						</div>
+					</div>
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+									<ul>
+										<li><a href="{{ url_for('index') }}">Homepage</a></li>
+                                        <li><a href="{{ url_for('resume_checker') }}">Resume Checker</a></li>
+                                        <li><a href="{{ url_for('job_matcher') }}">Job Matcher</a></li>
+                                        <li><a href="{{ url_for('job_qualifications') }}">Job Qualifications</a></li>
+                                        <li><a href="{{ url_for('school_work') }}">Relevant Coursework</a></li>
+                                        <li><a href="{{ url_for('machine_learning') }}">Machine Learning</a></li>
+										<li><a href="{{ url_for('webapp') }}">Making WebApps</a></li>
+										<li><a href="{{ url_for('java') }}">Java</a></li>
+										<li>
+											<span class="opener">More links</span>
+											<ul>
+												<li><a href="{{ url_for('python') }}">Python</a></li>
+												<li><a href="{{ url_for('js_ts') }}">Java/TypeScript</a></li>
+												<li><a href="{{ url_for('sql') }}">SQL</a></li>
+												<li><a href="{{ url_for('about_me') }}">About me</a></li>
+											</ul>
+										</li>
+									</ul>
+								</nav>
+
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>More important information</h2>
+									</header>
+									<div class="mini-posts">
+										<article>
+											<img src="{{ url_for('static', filename='images/hackathon.jpg') }}" alt="">
+											<p>Hackathons are collaborative coding events where participants work in
+                                                teams to build innovative projects within a limited time. They provide
+                                                students with hands-on experience, improve problem-solving skills, and
+                                                foster teamwork. Hackathons also help students network, learn new technologies,
+                                                and build portfolios, making them valuable for career growth.</p>
+										</article>
+										<article>
+											<img src="{{ url_for('static', filename='images/GitHub.png') }}" alt="">
+											<p>If you do not know already, GitHub is a crucial tool for developers, offering version control
+                                                to track code changes, collaborate on projects, and manage workflows
+                                                efficiently. It enables teamwork through pull requests, fosters learning
+                                                via open-source projects, and serves as a portfolio to showcase skills to
+                                                employers. Its integration with tools like CI/CD pipelines makes it essential for modern software development.</p>
+										</article>
+										<article>
+											<img src="{{ url_for('static', filename='images/learn.png') }}" alt="">
+											<p>If you click the link below, you'll find a collection of the most useful
+                                                and important topics taught to computer science majors. It highlights
+                                                the connection between classroom learning and real-world job applications.
+                                            You can choose to learn form various topics and only the key points to help your
+                                            carer.</p>
+										</article>
+									</div>
+									<ul class="actions">
+										<li><a href="{{ url_for('school_work') }}" class="button">Learn now</a></li>
+									</ul>
+								</section>
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>Get in touch with me!</h2>
+									</header>
+									<p>Follow me and shoot me a message on LinkedIn or to my email! Always open to answer
+                                    any questions.</p>
+									<ul class="contact">
+										<li class="icon solid fa-envelope"><a href="#">dreuxcharles@ymail.com</a></li>
+										<li class="icon solid fa-home"><a href="#">https://www.linkedin.com/in/dreux-hebert-0117a5300/</a></li>
+									</ul>
+								</section>
+							<!-- Footer -->
+								<footer id="footer">
+									<p class="copyright">&copy; Untitled. All rights reserved.<a href=""></a><a href=""></a>  </p>
+								</footer>
+						</div>
+					</div>
+			</div>
+			<script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+            <script src="{{ url_for('static', filename='js/browser.min.js') }}"></script>
+            <script src="{{ url_for('static', filename='js/breakpoints.min.js') }}"></script>
+            <script src="{{ url_for('static', filename='js/util.js') }}"></script>
+            <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+	</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <title>About Me</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<body class="is-preload">
+    <div id="wrapper">
+        <div id="main">
+            <div class="inner">
+                <header id="header">
+                    <a href="{{ url_for('index') }}" class="logo"><strong>Dreux Hebert</strong> CS Student at KSU</a>
+                    <ul class="icons">
+                        <li><a href="https://www.instagram.com/dreu.x/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+                        <li><a href="https://github.com/dreuxhebert" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+                        <li><a href="https://www.linkedin.com/in/dreux-hebert-0117a5300/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                    </ul>
+                </header>
+                <section>
+                    <header class="main">
+                        <h1>About Me</h1>
+                    </header>
+                    <div>
+                        <h2>Why I Created This Website</h2>
+                        <p>
+                            I built this website to help computer science students who feel lost or unsure about their next
+                            steps. My goal is to provide resources, guidance, and tools to bridge the gap between classroom
+                            knowledge and real-world skills. Several years ago, I began my programming journey, starting with Java.
+                            I then ventured into creating web applications using Java. However, not long after, I started feeling lost
+                            and unsure about what to do next. How could I become a better programmer? What does the tech field really look like?
+
+                            Eventually, I lost my motivation and stepped away from programming for a few years.
+                            Now, I'm creating this website to help people who might find themselves in a similar situation. My goal is to provide a clear outline of what to do next and how to do it.
+                            I hope you find something here that helps you on your journey!
+                        </p>
+
+                        <h2>My Recent Projects</h2>
+<ul>
+    <li>
+        <strong>AI Video Generator App:</strong> Developed a TikTok-like mobile application designed to entertain users with AI-generated videos.
+        The app utilized machine learning and deep learning techniques to generate content based on pre-trained models, eliminating the need for
+        user-uploaded videos. Designed for offline use, the app provided a seamless user experience without requiring database connections.
+        Focused on optimizing performance, I incorporated efficient algorithms for video synthesis and built an intuitive interface to ensure accessibility for younger audiences.
+    </li>
+    <li>
+        <strong>ML Dashboard:</strong> Created an interactive web-based machine learning dashboard using Flask and Python.
+        The application allows users to upload datasets, select from a variety of machine learning algorithms (e.g., Linear
+        Regression, Decision Trees, and Logistic Regression), and generate predictions with real-time feedback. Integrated
+        features include data preprocessing, validation, and performance metrics display to guide users in interpreting results.
+        The project also included a clean, responsive UI with JavaScript and CSS, ensuring usability across devices.
+    </li>
+    <li>
+        <strong>Deep Learning Model:</strong> Built and fine-tuned a deep learning model in Python for advanced data analysis tasks.
+        Leveraging TensorFlow and Keras, I implemented a neural network architecture tailored for image recognition and classification.
+        The model was trained on large datasets, employing techniques like data augmentation, dropout, and adaptive learning rates to
+        enhance accuracy and reduce overfitting. To demonstrate the model's practicality, I developed a visualization module that
+        allowed users to interpret predictions and understand the inner workings of the network, making it suitable for educational and professional applications.
+    </li>
+</ul>
+                        <h2>My Goals</h2>
+                        <p>
+                            My ultimate goal is to become a well-rounded computer scientist who not only excels in coding but
+                            also helps others succeed in their careers. I’m passionate about creating tools and platforms
+                            that simplify learning and make technology accessible to everyone. I also aim to continue developing
+                            innovative projects, sharpening my skills, and exploring new opportunities in machine learning and software development.
+                        </p>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+       <div id="sidebar">
+						<div class="inner">
+								<nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+									<ul>
+										<li><a href="{{ url_for('index') }}">Homepage</a></li>
+                                        <li><a href="{{ url_for('resume_checker') }}">Resume Checker</a></li>
+                                        <li><a href="{{ url_for('job_matcher') }}">Job Matcher</a></li>
+                                        <li><a href="{{ url_for('job_qualifications') }}">Job Qualifications</a></li>
+                                        <li><a href="{{ url_for('school_work') }}">Relevant Coursework</a></li>
+                                        <li><a href="{{ url_for('machine_learning') }}">Machine Learning</a></li>
+										<li><a href="{{ url_for('webapp') }}">Making WebApps</a></li>
+										<li><a href="{{ url_for('java') }}">Java</a></li>
+										<li>
+											<span class="opener">More links</span>
+											<ul>
+												<li><a href="{{ url_for('python') }}">Python</a></li>
+												<li><a href="{{ url_for('js_ts') }}">Java/TypeScript</a></li>
+												<li><a href="{{ url_for('sql') }}">SQL</a></li>
+												<li><a href="{{ url_for('about_me') }}">About me</a></li>
+											</ul>
+										</li>
+									</ul>
+								</nav>
+								<section>
+									<header class="major">
+										<h2>More important information</h2>
+									</header>
+									<div class="mini-posts">
+										<article>
+											<img src="{{ url_for('static', filename='images/hackathon.jpg') }}" alt="">
+											<p>Hackathons are collaborative coding events where participants work in
+                                                teams to build innovative projects within a limited time. They provide
+                                                students with hands-on experience, improve problem-solving skills, and
+                                                foster teamwork. Hackathons also help students network, learn new technologies,
+                                                and build portfolios, making them valuable for career growth.</p>
+										</article>
+										<article>
+											<img src="{{ url_for('static', filename='images/GitHub.png') }}" alt="">
+											<p>If you do not know already, GitHub is a crucial tool for developers, offering version control
+                                                to track code changes, collaborate on projects, and manage workflows
+                                                efficiently. It enables teamwork through pull requests, fosters learning
+                                                via open-source projects, and serves as a portfolio to showcase skills to
+                                                employers. Its integration with tools like CI/CD pipelines makes it essential for modern software development.</p>
+										</article>
+										<article>
+											<img src="{{ url_for('static', filename='images/learn.png') }}" alt="">
+											<p>If you click the link below, you'll find a collection of the most useful
+                                                and important topics taught to computer science majors. It highlights
+                                                the connection between classroom learning and real-world job applications.
+                                            You can choose to learn form various topics and only the key points to help your
+                                            carer.</p>
+										</article>
+									</div>
+									<ul class="actions">
+										<li><a href="{{ url_for('school_work') }}" class="button">Learn now</a></li>
+									</ul>
+								</section>
+								<section>
+									<header class="major">
+										<h2>Get in touch with me!</h2>
+									</header>
+									<p>Follow me and shoot me a message on LinkedIn or to my email! Always open to answer
+                                    any questions.</p>
+									<ul class="contact">
+										<li class="icon solid fa-envelope"><a href="#">dreuxcharles@ymail.com</a></li>
+										<li class="icon solid fa-home"><a href="#">https://www.linkedin.com/in/dreux-hebert-0117a5300/</a></li>
+									</ul>
+								</section>
+								<footer id="footer">
+									<p class="copyright">&copy; Untitled. All rights reserved.<a href=""></a><a href=""></a>  </p>
+								</footer>
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/browser.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/breakpoints.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/util.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

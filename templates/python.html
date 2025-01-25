@@ -1,0 +1,321 @@
+<!DOCTYPE HTML>
+<html lang="">
+<head>
+    <title>Python</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+</head>
+<body class="is-preload">
+    <div id="wrapper">
+        <div id="main">
+            <div class="inner">
+                <header id="header">
+                    <a href="{{ url_for('index') }}" class="logo"><strong>Dreux Hebert</strong> CS Student at KSU</a>
+                    <ul class="icons">
+                       <li><a href="https://www.instagram.com/dreu.x/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+                        <li><a href="https://github.com/dreuxhebert" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+                        <li><a href="https://www.linkedin.com/in/dreux-hebert-0117a5300/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                    </ul>
+                </header>
+                <!-- Content -->
+                <section>
+    <header>
+        <h2>Setting Up Python</h2>
+    </header>
+    <p>To get started, you'll need to install Python on your system:</p>
+    <ul>
+        <li><strong>Download Python:</strong> Visit the <a href="https://www.python.org/downloads/" target="_blank">official Python website</a> to download and install the latest version.</li>
+        <li><strong>Verify Installation:</strong> Open a terminal or command prompt and type:
+            <pre><code class="language-bash">python --version</code></pre>
+            or
+            <pre><code class="language-bash">python3 --version</code></pre>
+        </li>
+        <li><strong>Install an IDE:</strong> Use an editor or IDE for a smoother coding experience:
+            <ul>
+                <li><strong>VS Code:</strong> Lightweight and extensible with Python extensions.</li>
+                <li><strong>PyCharm:</strong> A dedicated IDE for Python development.</li>
+                <li><strong>Jupyter Notebook:</strong> Excellent for data analysis and visualization.</li>
+            </ul>
+        </li>
+    </ul>
+
+                    <ul>
+    <li><a href="https://www.youtube.com/watch?v=_uQrJ0TkZlc" target="_blank">Python for Beginners - Full Course (Programming with Mosh)</a></li>
+    <li><a href="https://www.youtube.com/watch?v=rfscVS0vtbw" target="_blank">Learn Python - Full Course for Beginners (freeCodeCamp)</a></li>
+    <li><a href="https://www.youtube.com/watch?v=kqtD5dpn9C8" target="_blank">Python Tutorial - Python Full Course for Beginners (Bro Code)</a></li>
+    <li><a href="https://www.youtube.com/watch?v=4F2m91eKmts" target="_blank">Complete Python Programming Course (CodeWithHarry)</a></li>
+    <li><a href="https://www.youtube.com/watch?v=8DvywoWv6fI" target="_blank">Python Programming Full Course (Simplilearn)</a></li>
+</ul>
+
+
+</section>
+
+<section>
+    <header>
+        <h2>Your First Python Script</h2>
+    </header>
+    <p>Here’s how to write and run a simple Python script:</p>
+    <pre><code class="language-python">
+# This is a Python comment. Use comments to explain your code.
+print("Hello, Python!")
+    </code></pre>
+    <p><strong>Steps to Run:</strong></p>
+    <ol>
+        <li>Save the file as <code>hello.py</code>.</li>
+        <li>Open a terminal, navigate to the file's directory, and run:
+            <pre><code class="language-bash">python hello.py</code></pre>
+        </li>
+    </ol>
+</section>
+
+<section>
+    <header>
+        <h2>Python Fundamentals</h2>
+    </header>
+    <p>Python is known for its clean and easy-to-read syntax. Let’s explore some basics:</p>
+
+    <h3>Variables and Data Types</h3>
+    <p>In Python, variables are dynamically typed, meaning you don’t need to declare their type:</p>
+    <pre><code class="language-python">
+# Variable examples
+name = "Alice"  # String
+age = 25        # Integer
+height = 5.4    # Float
+is_student = True  # Boolean
+
+print(f"Name: {name}, Age: {age}, Height: {height}, Student: {is_student}")
+    </code></pre>
+
+    <h3>Control Flow</h3>
+    <p>Control the flow of your program using conditional statements and loops:</p>
+    <pre><code class="language-python">
+# If-Else Example
+number = 10
+if number > 5:
+    print("The number is greater than 5.")
+else:
+    print("The number is 5 or less.")
+
+# For Loop Example
+for i in range(5):
+    print(f"Count: {i}")
+
+# While Loop Example
+count = 0
+while count < 3:
+    print(f"While Count: {count}")
+    count += 1
+    </code></pre>
+</section>
+
+<section>
+    <header>
+        <h2>Working with Functions</h2>
+    </header>
+    <p>Functions in Python allow you to organize and reuse your code:</p>
+    <pre><code class="language-python">
+# Defining and calling a function
+def greet(name):
+    return f"Hello, {name}!"
+
+message = greet("Alice")
+print(message)
+    </code></pre>
+</section>
+
+<section>
+    <header>
+        <h2>File Handling</h2>
+    </header>
+    <p>Python makes it easy to read and write files. Here’s an example:</p>
+    <pre><code class="language-python">
+# Writing to a file
+with open("example.txt", "w") as file:
+    file.write("This is an example file.")
+
+# Reading from a file
+with open("example.txt", "r") as file:
+    content = file.read()
+    print(content)
+    </code></pre>
+</section>
+
+<section>
+    <header>
+        <h2>Libraries and Packages</h2>
+    </header>
+    <p>Python has a rich ecosystem of libraries and packages. Here’s how to install and use them:</p>
+    <pre><code class="language-bash">pip install requests</code></pre>
+    <pre><code class="language-python">
+import requests
+
+response = requests.get("https://api.github.com")
+print(response.json())
+    </code></pre>
+</section>
+
+<section>
+    <header>
+        <h2>Intro to Object-Oriented Programming</h2>
+    </header>
+    <p>Python supports object-oriented programming (OOP). Here’s a simple example:</p>
+    <pre><code class="language-python">
+class Dog:
+    def __init__(self, name, breed):
+        self.name = name
+        self.breed = breed
+
+    def bark(self):
+        return f"{self.name} says Woof!"
+
+my_dog = Dog("Buddy", "Golden Retriever")
+print(my_dog.bark())
+    </code></pre>
+</section>
+
+<section>
+    <header>
+        <h2>Using Python for Data</h2>
+    </header>
+    <p>Python excels at data manipulation and visualization. Here’s an example using the <code>pandas</code> library:</p>
+    <pre><code class="language-python">
+import pandas as pd
+
+# Create a DataFrame
+data = {"Name": ["Alice", "Bob", "Charlie"], "Age": [25, 30, 35]}
+df = pd.DataFrame(data)
+
+print(df)
+    </code></pre>
+</section>
+
+<section>
+    <header>
+        <h2>Connecting to a Database</h2>
+    </header>
+    <p>Python can connect to databases like PostgreSQL using libraries like <code>psycopg2</code>:</p>
+    <pre><code class="language-python">
+import psycopg2
+
+try:
+    conn = psycopg2.connect(
+        dbname="mydatabase",
+        user="username",
+        password="password",
+        host="localhost"
+    )
+    print("Database connection successful!")
+except Exception as e:
+    print(f"Error: {e}")
+    </code></pre>
+</section>
+
+<section>
+    <header>
+        <h2>Final Tips for Beginners</h2>
+    </header>
+    <ul>
+        <li>Practice consistently by solving small problems and building projects.</li>
+        <li>Explore Python’s extensive libraries for tasks like web scraping (<code>BeautifulSoup</code>) and machine learning (<code>scikit-learn</code>).</li>
+        <li>Don’t be afraid to experiment and learn from your mistakes.</li>
+    </ul>
+</section>
+            </div>
+        </div>
+					<div id="sidebar">
+						<div class="inner">
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+									<ul>
+										<li><a href="{{ url_for('index') }}">Homepage</a></li>
+                                        <li><a href="{{ url_for('resume_checker') }}">Resume Checker</a></li>
+                                        <li><a href="{{ url_for('job_matcher') }}">Job Matcher</a></li>
+                                        <li><a href="{{ url_for('job_qualifications') }}">Job Qualifications</a></li>
+                                        <li><a href="{{ url_for('school_work') }}">Relevant Coursework</a></li>
+                                        <li><a href="{{ url_for('machine_learning') }}">Machine Learning</a></li>
+										<li><a href="{{ url_for('webapp') }}">Making WebApps</a></li>
+										<li><a href="{{ url_for('java') }}">Java</a></li>
+										<li>
+											<span class="opener">More links</span>
+											<ul>
+												<li><a href="{{ url_for('python') }}">Python</a></li>
+												<li><a href="{{ url_for('js_ts') }}">Java/TypeScript</a></li>
+												<li><a href="{{ url_for('sql') }}">SQL</a></li>
+												<li><a href="{{ url_for('about_me') }}">About me</a></li>
+											</ul>
+										</li>
+									</ul>
+								</nav>
+
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>More important information</h2>
+									</header>
+									<div class="mini-posts">
+										<article>
+											<img src="{{ url_for('static', filename='images/hackathon.jpg') }}" alt="">
+											<p>Hackathons are collaborative coding events where participants work in
+                                                teams to build innovative projects within a limited time. They provide
+                                                students with hands-on experience, improve problem-solving skills, and
+                                                foster teamwork. Hackathons also help students network, learn new technologies,
+                                                and build portfolios, making them valuable for career growth.</p>
+										</article>
+										<article>
+											<img src="{{ url_for('static', filename='images/GitHub.png') }}" alt="">
+											<p>If you do not know already, GitHub is a crucial tool for developers, offering version control
+                                                to track code changes, collaborate on projects, and manage workflows
+                                                efficiently. It enables teamwork through pull requests, fosters learning
+                                                via open-source projects, and serves as a portfolio to showcase skills to
+                                                employers. Its integration with tools like CI/CD pipelines makes it essential for modern software development.</p>
+										</article>
+										<article>
+											<img src="{{ url_for('static', filename='images/learn.png') }}" alt="">
+											<p>If you click the link below, you'll find a collection of the most useful
+                                                and important topics taught to computer science majors. It highlights
+                                                the connection between classroom learning and real-world job applications.
+                                            You can choose to learn form various topics and only the key points to help your
+                                            carer.</p>
+										</article>
+									</div>
+									<ul class="actions">
+										<li><a href="{{ url_for('school_work') }}" class="button">Learn now</a></li>
+									</ul>
+								</section>
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>Get in touch with me!</h2>
+									</header>
+									<p>Follow me and shoot me a message on LinkedIn or to my email! Always open to answer
+                                    any questions.</p>
+									<ul class="contact">
+										<li class="icon solid fa-envelope"><a href="#">dreuxcharles@ymail.com</a></li>
+										<li class="icon solid fa-home"><a href="#">https://www.linkedin.com/in/dreux-hebert-0117a5300/</a></li>
+									</ul>
+								</section>
+
+                            <!-- Footer -->
+                                 <footer id="footer">
+									<p class="copyright">&copy; Untitled. All rights reserved.<a href=""></a><a href=""></a>  </p>
+								</footer>
+                            </div>
+                    </div>
+
+    </div>
+    <!-- Scripts -->
+    <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/browser.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/breakpoints.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/util.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
