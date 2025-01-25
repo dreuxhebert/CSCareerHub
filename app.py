@@ -14,9 +14,10 @@ from flask_migrate import Migrate
 
 
 load_dotenv()
+secret_key = os.urandom(24)
 app = Flask(__name__)
 app.config['ALLOWED_EXTENSIONS'] = {'pdf', 'docx'}
-app.config['SECRET_KEY'] = os.getenv('SECRET_KEY')
+app.config['SECRET_KEY'] = os.urandom(24)
 app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('SQLALCHEMY_DATABASE_URI')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['UPLOAD_FOLDER'] = 'uploads'
