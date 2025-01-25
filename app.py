@@ -12,7 +12,6 @@ from matcher_model import recommend_jobs
 from models import grade_resume, process_docx
 from flask_migrate import Migrate
 
-
 load_dotenv()
 secret_key = os.urandom(24)
 app = Flask(__name__)
@@ -88,12 +87,18 @@ def login():
         password = request.form['password']
         user = User.query.filter_by(email=email).first()
 
-        if not user or not check_password_hash(user.password, password):
+        # If user exists but it is an OAuth login (no password stored), skip password check
+        if user and (not user.password or user.password == ""):
+            login_user(user, remember=True)
+            return redirect(url_for('index'))
+
+        # Regular login: check password
+        if user and check_password_hash(user.password, password):
+            login_user(user, remember=True)
+            return redirect(url_for('index'))
+        else:
             error = "Incorrect email or password. Please try again."
             return render_template('login.html', error=error)
-
-        login_user(user, remember=True)
-        return redirect(url_for('index'))
 
     return render_template('login.html')
 
@@ -154,7 +159,7 @@ def authorize_github():
         db.session.commit()
 
     login_user(user)
-    return redirect(url_for('index'))  # Redirect to index after GitHub login
+    return redirect(url_for('index'))   #
 
 @app.route('/register', methods=['GET', 'POST'])
 def register():
