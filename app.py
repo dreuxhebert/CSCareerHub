@@ -91,7 +91,7 @@ def login():
         password = request.form['password']
         user = User.query.filter_by(email=email).first()
 
-        # If user exists but it is an OAuth login (no password stored), skip password check
+        # If user exists, but it is an OAuth login (no password stored), skip password check
         if user and (not user.password or user.password == ""):
             login_user(user, remember=True)
             return redirect(url_for('index'))
