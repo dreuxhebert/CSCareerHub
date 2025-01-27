@@ -270,13 +270,14 @@ def js_ts():
 def sql():
     return render_template('sql.html')
 
-@app.route('/privacy-policy')
+@app.route('/privacy')
 def privacy_policy():
-    return "Privacy Policy Placeholder"
+    return render_template('privacy.html')
 
-@app.route('/terms-of-service')
+@app.route('/terms')
 def terms_of_service():
-    return "Terms of Service Placeholder"
+    return render_template('terms.html')
+
 
 @app.route('/job_matcher', methods=['GET', 'POST'])
 def job_matcher():

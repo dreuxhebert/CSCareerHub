@@ -1,0 +1,122 @@
+<!DOCTYPE HTML>
+<html lang="">
+	<head>
+		<title>Terms of Service</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+	</head>
+	<body class="is-preload">
+			<div id="wrapper">
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<!-- Header -->
+								<header id="header">
+									<a href="{{ url_for('about_me') }}" class="logo"><strong>Dreux Hebert</strong> CS Student at KSU</a>
+									<ul class="icons">
+										<li><a href="https://www.instagram.com/dreu.x/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+                                        <li><a href="https://github.com/dreuxhebert" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+                                        <li><a href="https://www.linkedin.com/in/dreux-hebert-0117a5300/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+									</ul>
+								</header>
+
+                            <!-- Content -->
+                                <section>
+                                    <header class="main">
+                                        <h1>Terms of Service</h1>
+                                    </header>
+                                    <p>Welcome to CSCareerHub! By accessing or using our services, you agree to comply with and be bound by the following terms and conditions.</p>
+
+                                    <h2>1. Use of Services</h2>
+                                    <p>Our services are provided for educational and informational purposes only. You agree to use them lawfully and responsibly.</p>
+
+                                    <h2>2. User Responsibilities</h2>
+                                    <p>You are responsible for maintaining the confidentiality of your account and password and for restricting access to your account. You agree to accept responsibility for all activities that occur under your account.</p>
+
+                                    <h2>3. Prohibited Activities</h2>
+                                    <p>The following activities are prohibited while using our services:</p>
+                                    <ul>
+                                        <li>Submitting false or misleading information.</li>
+                                        <li>Attempting to gain unauthorized access to the website or its data.</li>
+                                        <li>Using our services for any illegal activities.</li>
+                                    </ul>
+
+                                    <h2>4. Limitation of Liability</h2>
+                                    <p>We strive to ensure accuracy and reliability, but we do not guarantee that our services will be error-free or uninterrupted. We are not responsible for any damages or losses arising from the use of our services.</p>
+
+                                    <h2>5. Modifications to Terms</h2>
+                                    <p>We reserve the right to update or modify these Terms of Service at any time without prior notice. Your continued use of the website constitutes your acceptance of the revised terms.</p>
+
+                                    <h2>6. Governing Law</h2>
+                                    <p>These terms and conditions are governed by and construed in accordance with the laws of the United States and the state of Georgia.</p>
+
+                                    <p>If you have any questions about these Terms of Service, please contact us at <a href="mailto:dreuxcharles@ymail.com">dreuxcharles@ymail.com</a>.</p>
+                                </section>
+						</div>
+					</div>
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+									<ul>
+										<li><a href="{{ url_for('index') }}">Homepage</a></li>
+                                        <li><a href="{{ url_for('resume_checker') }}">Resume Checker</a></li>
+                                        <li><a href="{{ url_for('job_matcher') }}">Job Matcher</a></li>
+                                        <li><a href="{{ url_for('job_qualifications') }}">Job Qualifications</a></li>
+                                        <li><a href="{{ url_for('school_work') }}">Relevant Coursework</a></li>
+                                        <li><a href="{{ url_for('machine_learning') }}">Machine Learning</a></li>
+										<li><a href="{{ url_for('webapp') }}">Making WebApps</a></li>
+										<li><a href="{{ url_for('java') }}">Java</a></li>
+										<li>
+											<span class="opener">More links</span>
+											<ul>
+												<li><a href="{{ url_for('python') }}">Python</a></li>
+												<li><a href="{{ url_for('js_ts') }}">Java/TypeScript</a></li>
+												<li><a href="{{ url_for('sql') }}">SQL</a></li>
+												<li><a href="{{ url_for('about_me') }}">About me</a></li>
+											</ul>
+										</li>
+									</ul>
+								</nav>
+
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>Get in touch with me!</h2>
+									</header>
+									<p>Follow me and shoot me a message on LinkedIn or to my email! Always open to answer
+                                    any questions.</p>
+									<ul class="contact">
+										<li class="icon solid fa-envelope"><a href="#">dreuxcharles@ymail.com</a></li>
+										<li class="icon solid fa-home"><a href="#">https://www.linkedin.com/in/dreux-hebert-0117a5300/</a></li>
+									</ul>
+								</section>
+
+							<!-- Footer -->
+								<footer id="footer">
+                                    <p class="copyright">
+                                     &copy; CSCareerHub. All rights reserved.
+                                      <a href="{{ url_for('privacy_policy') }}">Privacy Policy</a> |
+                                      <a href="{{ url_for('terms_of_service') }}">Terms of Service</a>
+                                     </p>
+                                </footer>
+						</div>
+					</div>
+
+			</div>
+		<!-- Scripts -->
+			<script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+            <script src="{{ url_for('static', filename='js/browser.min.js') }}"></script>
+            <script src="{{ url_for('static', filename='js/breakpoints.min.js') }}"></script>
+            <script src="{{ url_for('static', filename='js/util.js') }}"></script>
+            <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+	</body>
+</html>
+
